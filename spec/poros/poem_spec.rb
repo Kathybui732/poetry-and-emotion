@@ -16,6 +16,6 @@ RSpec.describe 'Poem' do
     poem = Poem.new(data)
     expect(poem.title).to eq(data[:title])
     expect(poem.author).to eq(data[:author])
-    expect(poem.string).to eq(data[:lines][0])
+    expect(poem.string).to eq(data[:lines].join(' '))
   end
 end

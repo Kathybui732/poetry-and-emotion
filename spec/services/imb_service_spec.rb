@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe 'Feature' do
-  describe 'As a type of user' do
-    before :each do
+  it "can get tone of poem" do
+    string = 'Not at Home to Callers'
 
-    end
+    tone_data = InternationalBusinessMachinesService.new.get_tone(string)
   end
 end

@@ -4,6 +4,6 @@ class Poem
   def initialize(poem_data)
     @title = poem_data[:title]
     @author = poem_data[:author]
-    @string = poem_data[:lines][0]
+    @string = poem_data[:lines].join(' ')
   end
 end
