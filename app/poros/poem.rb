@@ -8,6 +8,6 @@ class Poem
   end
 
   def get_poem_tone
-    SearchResults.new.get_tone(@string)
+    SearchResults.new.get_tone(@string).tone
   end
 end
