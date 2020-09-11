@@ -4,7 +4,8 @@ class SearchResults
   end
 
   def get_tone(string)
-    ibm_services.get_tone(string)
+    data = ibm_services.get_tone(string)
+    Tone.new(data)
   end
 
   def poetry_service

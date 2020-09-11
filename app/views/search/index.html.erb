@@ -1,0 +1,12 @@
+<h1>Poem Results</h1>
+
+<section class="search-results">
+  <% @results.each do |poem| %>
+  <section class="poem-<%= poem.title.split.first %>">
+    Title: <%= poem.title %>, by: <%= poem.author %><br>
+    Poem: <%= poem.string %><br>
+    Tone: <%= poem.get_poem_tone.tone.join(', ') %><br>
+    <br>
+  </section>
+  <% end %>
+</section>
