@@ -4,7 +4,6 @@ class InternationalBusinessMachinesService
       req.params['text'] = string
       req.params['version'] = '2017-09-21'
     end
-    require "pry"; binding.pry
     JSON.parse(response.body, symbolize_names: true)
   end
 
@@ -12,7 +11,7 @@ class InternationalBusinessMachinesService
 
   def conn
     Faraday.new 'https://api.us-south.tone-analyzer.watson.cloud.ibm.com/' do |f|
-      f.basic_auth('apikey', '5Kzf3ZgrXcPSZn8V9rbKtmno9mwVwc-YtNy7Ina4SazJ')
+      f.basic_auth('apikey', ENV['IBM_API_KEY'])
     end
   end
 end
